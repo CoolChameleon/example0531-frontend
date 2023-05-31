@@ -9,7 +9,7 @@ const InputForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/app/add', { num1, num2 });
+      const response = await axios.post('/api/add', { num1, num2 });
     //   console.log('Response:', response);
       if (response.data && response.data.result !== undefined) {
         setResult(response.data.result);
